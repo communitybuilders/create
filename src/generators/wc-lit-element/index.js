@@ -68,7 +68,7 @@ export const WcLitElementPackageMixin = subclass =>
       console.log('');
       console.log('All you need to do is run:');
       console.log(`  cd ${this.templateData.tagName}`);
-      console.log('  npm run start');
+      console.log('  yarn start');
       console.log('');
     }
   };

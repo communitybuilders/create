@@ -1,20 +1,20 @@
 {
-  "name": "@open-wc/create",
+  "name": "@cbar/create",
   "version": "0.38.63",
   "publishConfig": {
     "access": "public"
   },
-  "description": "Easily setup all the tools of Open Web Components.",
-  "license": "MIT",
+  "description": "Easily setup all the tools of CBAR Web Components.",
+  "license": "CBAR",
   "repository": {
     "type": "git",
-    "url": "https://github.com/open-wc/create.git"
+    "url": "https://github.com/communitybuilders/create.git"
   },
   "bugs": {
-    "url": "https://github.com/open-wc/create/issues"
+    "url": "https://github.com/communitybuilders/create/issues"
   },
   "author": "open-wc",
-  "homepage": "https://github.com/open-wc/create",
+  "homepage": "https://github.com/communitybuilders/create",
   "bin": {
     "create-open-wc": "./dist/create.js"
   },

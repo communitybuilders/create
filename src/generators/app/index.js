@@ -162,6 +162,19 @@ export const AppMixin = subclass =>
           ],
         },
         {
+          type: (prev, all) => (all.scope ? null : 'text'),
+          name: 'scope',
+          message: (prev, all) =>
+            `What is the scope of your ${
+              all.scaffoldType === 'app' ? 'app shell element' : 'web component'
+            }?`,
+          initial: "@cbar",
+          validate: scope =>
+            !/^@[A-Za-z][\w-]+$/.test(scope)
+              ? 'Must be a valid scope name (begins with an "@", only URL-safe characters, no leading underscores or dots) (e.g. @cbar)'
+              : true,
+        },
+        {
           type: (prev, all) => (all.tagName ? null : 'text'),
           name: 'tagName',
           message: (prev, all) =>

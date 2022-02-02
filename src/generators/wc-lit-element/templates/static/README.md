@@ -5,14 +5,14 @@ This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) reco
 ## Installation
 
 ```bash
-npm i <%= tagName %>
+yarn add <%= scope %><%= tagName %>
 ```
 
 ## Usage
 
 ```html
 <script type="module">
-  import '<%= tagName %>/<%= tagName %>.js';
+  import '<%= scope %><%= tagName %>/<%= tagName %>.js';
 </script>
 
 <<%= tagName %>></<%= tagName %>>
@@ -29,7 +29,7 @@ If you customize the configuration a lot, you can consider moving them to indivi
 ## Local Demo with `web-dev-server`
 
 ```bash
-npm start
+yarn start
 ```
 
 To run a local development server that serves the basic demo located in `demo/index.html`

@@ -1,9 +1,9 @@
 {
-  "name": "<%= tagName %>",
+  "name": "<%= scope %><%= tagName %>",
   "version": "0.0.0",
-  "description": "Webcomponent <%= tagName %> following open-wc recommendations",
-  "author": "<%= tagName %>",
-  "license": "MIT",
+  "description": "Webcomponent <%= scope %><%= tagName %> following open-wc recommendations",
+  "author": "developers@collabortory.international",
+  "license": "CBAR",
   "customElements": "custom-elements.json",
   "scripts": {
     "analyze": "cem analyze --litelement"

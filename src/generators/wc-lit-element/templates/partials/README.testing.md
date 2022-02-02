@@ -3,11 +3,11 @@
 To execute a single test run:
 
 ```bash
-npm run test
+yarn test
 ```
 
 To run the tests in interactive watch mode run:
 
 ```bash
-npm run test:watch
+yarn test:watch
 ```

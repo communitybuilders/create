@@ -15,6 +15,7 @@ import {
 /**
  * Options for the generator
  * @typedef {object} GeneratorOptions
+ * @property {string} [scope] the scope of the element
  * @property {string} [tagName] the dash-case tag name
  * @property {string} [destinationPath='auto'] path to output to. default value 'auto' will output to current working directory
  * @property {'scaffold'} [type='scaffold'] path to output to. default value 'auto' will output to current working directory
@@ -50,9 +51,9 @@ class Generator {
 
   execute() {
     if (this.options.tagName) {
-      const { tagName } = this.options;
+      const { scope, tagName } = this.options;
       const className = getClassName(tagName);
-      this.templateData = { ...this.templateData, tagName, className };
+      this.templateData = { ...this.templateData, scope: `${scope}/`, tagName, className };
 
       if (this.options.destinationPath === 'auto') {
         this.options.destinationPath = process.cwd();
