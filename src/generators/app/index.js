@@ -13,8 +13,8 @@ import { gatherMixins } from './gatherMixins.js';
  * Allows to control the data via command line
  *
  * example:
- * npm init @open-wc --type scaffold --scaffoldType app --tagName foo-bar --installDependencies false
- * npm init @open-wc --type upgrade --features linting demoing --tagName foo-bar --installDependencies false
+ * npm init @cbar --type scaffold --scaffoldType app --tagName foo-bar --installDependencies false
+ * npm init @cbar --type upgrade --features linting demoing --tagName foo-bar --installDependencies false
  */
 const optionDefinitions = [
   {
@@ -93,7 +93,7 @@ if (overrides.help) {
     },
     {
       header: 'Usage',
-      content: '$ npm init @open-wc [<options>]',
+      content: '$ npm init @cbar [<options>]',
     },
     {
       header: 'Options',

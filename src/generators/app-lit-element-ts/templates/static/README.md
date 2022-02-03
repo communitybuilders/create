@@ -11,7 +11,7 @@
 To get started:
 
 ```sh
-npm init @open-wc
+npm init @cbar
 # requires node 10 & npm 6 or higher
 ```
 

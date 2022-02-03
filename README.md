@@ -15,18 +15,18 @@ Web component project scaffolding.
 ## Usage
 
 ```bash
-npm init @open-wc
+npm init @cbar
 ```
 
 <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>npm init</code> requires node 14 &amp; npm 6 or higher</p></div>
 
 This will kickstart a menu guiding you through all available actions.
 
-    $ npm init @open-wc
+    $ npm init @cbar
     npx: installed 14 in 4.074s
             _.,,,,,,,,,._
          .d''           ``b.       Open Web Components Recommendations
-       .p'      Open       `q.
+       .p'      CBAR       `q.
      .d'    Web Components  `b.    Start or upgrade your web component project with
      .d'                     `b.   ease. All our recommendations at your fingertips.
      ::   .................   ::
@@ -67,7 +67,7 @@ They will create a new folder and set up everything you need to get started imme
 Example usage:
 
 ```bash
-npm init @open-wc
+npm init @cbar
 # Select "Scaffold a new project"
 ```
 
@@ -90,7 +90,7 @@ Example usage:
 
 ```bash
 cd existing-web-component
-npm init @open-wc
+npm init @cbar
 # select "Upgrade an existing project" or add features while scaffolding
 ```
 
