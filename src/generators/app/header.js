@@ -3,7 +3,7 @@ import chalk from 'chalk';
 export default `
         _.,,,,,,,,,._
      .d''           \`\`b.       ${chalk.underline('Open Web Components Recommendations')}
-   .p'      Open       \`q.
+   .p'      CBAR       \`q.
  .d'    Web Components  \`b.    Start or upgrade your web component project with
  .d'                     \`b.   ease. All our recommendations at your fingertips.
  ::   .................   ::
