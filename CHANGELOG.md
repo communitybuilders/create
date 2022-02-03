@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.38.66](https://github.com/communitybuilders/create/compare/v0.38.65...v0.38.66) (2022-02-03)
+
 ### [0.38.65](https://github.com/communitybuilders/create/compare/v0.38.64...v0.38.65) (2022-02-03)
 
 ### [0.38.64](https://github.com/communitybuilders/create/compare/v0.38.63...v0.38.64) (2022-02-03)
