@@ -52,6 +52,12 @@ const optionDefinitions = [
     typeLabel: '{underline true|false}',
   },
   {
+    name: 'scope',
+    description: 'The scope for the web component or app shell element',
+    type: String,
+    typeLabel: '{underline string}',
+  },
+  {
     name: 'tagName',
     description: 'The tag name for the web component or app shell element',
     type: String,
