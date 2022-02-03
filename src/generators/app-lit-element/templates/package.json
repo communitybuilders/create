@@ -1,6 +1,6 @@
 {
   "name": "<%= tagName %>",
-  "license": "MIT",
+  "license": "CBAR",
   "scripts": {
     "start": "web-dev-server"
   },
