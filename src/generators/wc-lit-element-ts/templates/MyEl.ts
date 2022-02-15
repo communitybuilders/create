@@ -1,14 +1,9 @@
-import { html, css, LitElement } from 'lit';
+import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
+import {styles} from '../<%= tagName %>.css';
 
 export class <%= className %> extends LitElement {
-  static styles = css`
-    :host {
-      display: block;
-      padding: 25px;
-      color: var(--<%= tagName %>-text-color, #000);
-    }
-  `;
+  static override styles = [styles];
 
   @property({ type: String }) title = 'Hey there';
 

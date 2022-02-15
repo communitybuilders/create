@@ -6,9 +6,11 @@
     "./<%= tagName %>.js": "./dist/src/<%= tagName %>.js"
   },
   "scripts": {
-    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
-    "build": "tsc && <%= scriptRunCommand %> analyze -- --exclude dist",
-    "prepublish": "tsc && <%= scriptRunCommand %> analyze -- --exclude dist"
+    "start": "<%= scriptRunCommand %> build:style && tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"<%= scriptRunCommand %> watch:style\" \"wds\"",
+    "build": "<%= scriptRunCommand %> build:style && tsc && <%= scriptRunCommand %> analyze -- --exclude dist",
+    "build:style": "node ../../scripts/sass-to-lit-css/index.js <%= tagName %>.scss",
+    "prepublish": "<%= scriptRunCommand %> build:style && tsc && <%= scriptRunCommand %> analyze -- --exclude dist",
+    "watch:style": "chokidar --initial \"*.scss\" -c \"<%= scriptRunCommand %> build:style\""
   },
   "dependencies": {
     "lit": "^2.0.2"
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@web/dev-server": "^0.1.28",
     "concurrently": "^5.3.0",
+    "chokidar-cli": "^3.0.0",
     "typescript": "^4.5.2",
     "tslib": "^2.3.1"
   }

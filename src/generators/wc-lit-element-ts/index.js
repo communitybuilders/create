@@ -45,6 +45,12 @@ export const TsWcLitElementMixin = subclass =>
         this.destinationPath(`src/${tagName}.ts`),
       );
 
+      // write & rename el scss template
+      this.copyTemplate(
+        `${__dirname}/templates/my-el.scss`,
+        this.destinationPath(`./${tagName}.scss`),
+      );
+
       await this.copyTemplates(`${__dirname}/templates/static/**/*`);
     }
   };
