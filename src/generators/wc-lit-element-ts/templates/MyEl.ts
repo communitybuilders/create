@@ -1,11 +1,9 @@
 import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
-import {ThemableMixin} from "@vaadin/vaadin-themable-mixin";
+import { styles } from '../<%= tagName %>.css';
 
-export class <%= className %> extends ThemableMixin(LitElement) {
-  static get is() {
-    return '<%= tagName %>';
-  }
+export class <%= className %> extends LitElement {
+  static override styles = [styles];
 
   @property({ type: String }) title = 'Hey there';
 
