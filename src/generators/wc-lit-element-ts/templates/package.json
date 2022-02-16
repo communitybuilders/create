@@ -8,11 +8,12 @@
   "scripts": {
     "start": "<%= scriptRunCommand %> build:style && tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"<%= scriptRunCommand %> watch:style\" \"wds\"",
     "build": "<%= scriptRunCommand %> build:style && tsc && <%= scriptRunCommand %> analyze -- --exclude dist",
-    "build:style": "node ../../scripts/sass-to-lit-css/index.js <%= tagName %>.scss",
+    "build:style": "node ../../scripts/sass-to-lit-css/index.js themes/**/*.scss",
     "prepublish": "<%= scriptRunCommand %> build:style && tsc && <%= scriptRunCommand %> analyze -- --exclude dist",
     "watch:style": "chokidar --initial \"*.scss\" -c \"<%= scriptRunCommand %> build:style\""
   },
   "dependencies": {
+    "@vaadin/vaadin-themable-mixin": "^22.0.4",
     "lit": "^2.0.2"
   },
   "devDependencies": {
