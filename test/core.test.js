@@ -297,7 +297,7 @@ describe('optionsToCommand', () => {
       installDependencies: 'false',
     };
     expect(optionsToCommand(options)).to.equal(
-      'npm init @open-wc --type scaffold --scaffoldType wc --features testing demoing --tagName foo-bar --installDependencies false ',
+      'npm init @cbar --type scaffold --scaffoldType wc --features testing demoing --tagName foo-bar --installDependencies false ',
     );
   });
 });
