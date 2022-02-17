@@ -13,7 +13,7 @@
     "watch:style": "chokidar --initial \"*.scss\" \"themes/**/*.scss\" -c \"<%= scriptRunCommand %> build:style\""
   },
   "dependencies": {
-    "@cbar/cbar-themeable-mixin": "^1.0.0",
+    "@cbar/cbar-themeable-mixin": "^1.0.1",
     "lit": "^2.0.2"
   },
   "devDependencies": {
