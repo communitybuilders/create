@@ -1,8 +1,9 @@
 import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 import { styles } from '../<%= tagName %>.css';
+import { CbarThemeableMixin } from "@cbar/cbar-themeable-mixin";
 
-export class <%= className %> extends LitElement {
+export class <%= className %> extends CbarThemeableMixin(LitElement) {
   static override styles = [styles];
 
   @property({ type: String }) title = 'Hey there';
