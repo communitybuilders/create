@@ -54,6 +54,7 @@ You may pass options to skip the CLI wizard in part or in whole.
 | `--scaffoldType`        | `wc`\|`app`                                 | The type of project to scaffold. wc for a single published component, app for an application                              |     |
 | `--features`            | `linting`\|`testing`\|`demoing`\|`building` | Which features to include. linting, testing, demoing, or building                                                         |     |
 | `--typescript`          | `true`\|`false`                             | Whether to use TypeScript in your project                                                                                 |     |
+| `--buildType`           | `vite`\|`@web/dev-server`                   | What build tool to use for your WebComponent                                                                              |     |
 | `--tagName`             | string                                      | The tag name for the web component or app shell element                                                                   |     |
 | `--installDependencies` | `yarn`\|`npm`\|`false`                      | Whether to install dependencies. Choose npm or yarn to install with those package managers, or false to skip installation |     |
 | `--writeToDisk`         | `true`\|`false`                             | Whether or not to actually write the files to disk                                                                        |     |

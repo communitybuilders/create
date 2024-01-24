@@ -8,6 +8,7 @@ import {
 import { BuildingRollupMixin } from '../building-rollup/index.js';
 // ts
 import { TsWcLitElementMixin, TsWcLitElementPackageMixin } from '../wc-lit-element-ts/index.js';
+import { TsWcViteLitElementMixin, TsWcViteLitElementPackageMixin } from "../wc-vite-lit-element-ts/index.js";
 import { TsLintingMixin } from '../linting-ts/index.js';
 import { TsTestingMixin, TsTestingScaffoldMixin } from '../testing-ts/index.js';
 import {
@@ -24,11 +25,21 @@ export function gatherMixins(options) {
     if (options.typescript === 'true') {
       switch (options.scaffoldType) {
         case 'wc':
-          mixins.push(TsWcLitElementPackageMixin);
+          mixins.push(
+            options.buildTool === 'vite'
+              ? TsWcViteLitElementPackageMixin
+              : TsWcLitElementPackageMixin
+          );
+
           considerScaffoldFilesFor = true;
           break;
         case 'wc-lit-element':
-          mixins.push(TsWcLitElementMixin);
+          mixins.push(
+            options.buildTool === 'vite'
+              ? TsWcViteLitElementMixin
+              : TsWcLitElementMixin
+          );
+
           considerScaffoldFilesFor = true;
           break;
         // no default

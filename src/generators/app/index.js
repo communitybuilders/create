@@ -52,6 +52,12 @@ const optionDefinitions = [
     typeLabel: '{underline true|false}',
   },
   {
+    name: 'buildTool',
+    description: 'The build tool to use',
+    type: String,
+    typeLabel: '{underline vite|@web/dev-server}',
+  },
+  {
     name: 'scope',
     description: 'The scope for the web component or app shell element',
     type: String,
@@ -165,6 +171,18 @@ export const AppMixin = subclass =>
           choices: [
             { title: 'No', value: 'false' },
             { title: 'Yes', value: 'true' },
+          ],
+        },
+        {
+          type: (prev, all) =>
+            all.scaffoldType === 'wc' && all.typescript === 'true'
+              ? 'select'
+              : null,
+          name: 'buildTool',
+          message: 'What build tool would you like to use?',
+          choices: [
+            { title: 'Vite', value: 'vite' },
+            { title: '@web/dev-server', value: '@web/dev-server' },
           ],
         },
         {

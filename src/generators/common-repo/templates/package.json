@@ -1,5 +1,7 @@
 {
   "name": "<%= scope %><%= tagName %>",
+  "private": true,
+  "type": "module",
   "version": "0.0.0",
   "description": "Webcomponent <%= scope %><%= tagName %> following open-wc recommendations",
   "author": "developers@collabortory.international",
@@ -9,6 +11,6 @@
     "analyze": "cem analyze --litelement"
   },
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.4.17"
+    "@custom-elements-manifest/analyzer": "^0.9.0"
   }
 }

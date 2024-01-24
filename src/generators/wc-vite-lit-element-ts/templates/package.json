@@ -1,0 +1,26 @@
+{
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./<%= tagName %>.js": "./dist/src/<%= tagName %>.js"
+  },
+  "scripts": {
+    "dev": "npm run build:style && concurrently -k -r \"npm run watch:style\" \"vite --open\"",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "build:style": "node ../../scripts/sass-to-lit-css/index.js *.scss",
+    "prepublish": "<%= scriptRunCommand %> build:style && <%= scriptRunCommand %> analyze -- --exclude dist",
+    "watch:style": "chokidar --initial \"*.scss\" \"themes/**/*.scss\" -c \"<%= scriptRunCommand %> build:style\""
+  },
+  "dependencies": {
+    "@cbar/cbar-themeable-mixin": "^1.0.2",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.2.2"
+  }
+}
