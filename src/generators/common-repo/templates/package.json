@@ -4,7 +4,7 @@
   "type": "module",
   "version": "0.0.0",
   "description": "Webcomponent <%= scope %><%= tagName %> following open-wc recommendations",
-  "author": "developers@collabortory.international",
+  "author": "developers@collaboratory.international",
   "license": "CBAR",
   "customElements": "custom-elements.json",
   "scripts": {
