@@ -1,6 +1,5 @@
 {
   "name": "<%= scope %><%= tagName %>",
-  "private": true,
   "type": "module",
   "version": "0.0.0",
   "description": "Webcomponent <%= scope %><%= tagName %> following open-wc recommendations",
