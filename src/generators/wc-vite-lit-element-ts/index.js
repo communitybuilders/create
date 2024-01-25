@@ -75,7 +75,7 @@ export const TsWcViteLitElementPackageMixin = subclass =>
       console.log('');
       console.log('All you need to do is run:');
       console.log(`  cd ${this.templateData.tagName}`);
-      console.log('  yarn start');
+      console.log('  yarn dev');
       console.log('');
     }
   };
