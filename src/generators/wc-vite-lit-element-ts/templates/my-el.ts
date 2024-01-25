@@ -7,6 +7,8 @@ import viteLogo from '/vite.svg'
 
 @customElement('<%= tagName %>')
 export class <%= className %> extends CbarThemeableMixin(LitElement) {
+  static override styles = [styles];
+
   @property()
   docsHint = 'Click on the Vite and Lit logos to learn more'
 
@@ -36,8 +38,6 @@ export class <%= className %> extends CbarThemeableMixin(LitElement) {
   private _onClick() {
     this.count++
   }
-
-  static override styles = [styles];
 }
 
 declare global {
