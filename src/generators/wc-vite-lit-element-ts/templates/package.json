@@ -6,16 +6,16 @@
     "./<%= tagName %>.js": "./dist/src/<%= tagName %>.js"
   },
   "scripts": {
-    "dev": "npm run build:style && concurrently -k -r \"npm run watch:style\" \"vite --open\"",
-    "build": "tsc && vite build",
+    "dev": "<%= scriptRunCommand %> build:style && concurrently -k -r \"<%= scriptRunCommand %> watch:style\" \"vite --open\"",
+    "build": "rm -rf dist && <%= scriptRunCommand %> build:style && tsc && <%= scriptRunCommand %> analyze -- --exclude dist",
     "preview": "vite preview",
     "build:style": "node ../../scripts/sass-to-lit-css/index.js *.scss",
-    "prepublish": "<%= scriptRunCommand %> build:style && <%= scriptRunCommand %> analyze -- --exclude dist",
+    "prepublish": "<%= scriptRunCommand %> build",
     "watch:style": "chokidar --initial \"*.scss\" \"themes/**/*.scss\" -c \"<%= scriptRunCommand %> build:style\""
   },
   "dependencies": {
     "@cbar/cbar-themeable-mixin": "^1.0.2",
-    "lit": "^3.1.0"
+    "lit": "^2.8.0"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
