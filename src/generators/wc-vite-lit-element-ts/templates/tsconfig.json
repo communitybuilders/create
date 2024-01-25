@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "declaration": true,
 
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
 
